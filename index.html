@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>M. Mutharasi - Tech Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "navy-deep": "#050a1a",
+                        "navy-card": "#0a1229",
+                        "light-bg": "#f0f2f5",
+                        "light-card": "#e8eaf0",
+                        "cyan-electric": "#00f5ff",
+                        "cyan-dark": "#00b8bf",
+                        "terminal-green": "#10b981",
+                        "terminal-yellow": "#fbbf24",
+                        "terminal-red": "#ef4444"
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-light-bg dark:bg-navy-deep text-slate-800 dark:text-white font-sans;
+                background-image: 
+                    linear-gradient(rgba(0, 184, 191, 0.08) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0, 184, 191, 0.08) 1px, transparent 1px);
+                background-size: 30px 30px;
+            }
+            .dark body {
+                background-image: 
+                    linear-gradient(rgba(0, 245, 255, 0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0, 245, 255, 0.05) 1px, transparent 1px);
+            }
+        }
+        .bento-scroll {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .bento-scroll::-webkit-scrollbar {
+            display: none;
+        }
+        .code-syntax-name { @apply text-cyan-dark dark:text-cyan-electric; }
+        .code-syntax-keyword { color: #c678dd; }
+        .code-syntax-string { color: #50a14f; }
+        .dark .code-syntax-string { color: #98c379; }
+        .code-syntax-comment { color: #a0a1a7; }
+        .dark .code-syntax-comment { color: #5c6370; }
+        .timeline-dot::before {
+            content: '';
+            @apply absolute left-[-17px] top-1 w-2.5 h-2.5 rounded-full bg-cyan-dark dark:bg-cyan-electric shadow-[0_0_8px_rgba(0,184,191,0.5)] dark:shadow-[0_0_8px_#00f5ff];
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="pb-32 transition-colors duration-300">
+    <header
+        class="sticky top-0 z-50 bg-light-bg/80 dark:bg-navy-deep/80 backdrop-blur-md border-b border-cyan-dark/10 dark:border-cyan-electric/10 px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+            <div
+                class="bg-cyan-dark dark:bg-cyan-electric h-7 w-7 rounded-sm flex items-center justify-center text-white dark:text-navy-deep font-black text-xs">
+                MM</div>
+            <span
+                class="font-mono font-bold tracking-tighter text-cyan-dark dark:text-cyan-electric uppercase text-xs">m_mutharasi.sys</span>
+        </div>
+        <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2">
+                <span class="flex h-2 w-2 rounded-full bg-terminal-green animate-pulse"></span>
+                <span class="text-[10px] font-mono uppercase tracking-widest text-terminal-green">Status: Active</span>
+            </div>
+            <button class="p-1 rounded-full hover:bg-black/5 dark:hover:bg-white/5 text-slate-400"
+                onclick="document.documentElement.classList.toggle('dark')">
+                <span class="material-symbols-outlined text-lg dark:hidden">dark_mode</span>
+                <span class="material-symbols-outlined text-lg hidden dark:block">light_mode</span>
+            </button>
+        </div>
+    </header>
+    <main class="px-6 py-8 flex flex-col gap-8">
+        <section id="whoami"
+            class="rounded-xl bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 shadow-xl overflow-hidden">
+            <div
+                class="bg-black/5 dark:bg-white/5 px-4 py-2 border-b border-slate-300/50 dark:border-white/10 flex items-center justify-between">
+                <div class="flex gap-1.5">
+                    <div class="w-2.5 h-2.5 rounded-full bg-terminal-red"></div>
+                    <div class="w-2.5 h-2.5 rounded-full bg-terminal-yellow"></div>
+                    <div class="w-2.5 h-2.5 rounded-full bg-terminal-green"></div>
+                </div>
+                <span class="text-[10px] font-mono text-slate-500 dark:text-white/40">whoami.ts</span>
+            </div>
+            <div class="p-5 font-mono text-sm leading-relaxed text-slate-700 dark:text-white">
+                <div class="flex gap-4">
+                    <span class="text-slate-400 dark:text-white/20 select-none">1</span>
+                    <p><span class="code-syntax-keyword">const</span> developer = {</p>
+                </div>
+                <div class="flex gap-4">
+                    <span class="text-slate-400 dark:text-white/20 select-none">2</span>
+                    <p class="pl-4">name: <span class="code-syntax-name font-bold">'M. Mutharasi'</span>,</p>
+                </div>
+                <div class="flex gap-4">
+                    <span class="text-slate-400 dark:text-white/20 select-none">3</span>
+                    <p class="pl-4">role: <span class="code-syntax-string">'full stack developer'</span>,</p>
+                </div>
+                <div class="flex gap-4">
+                    <span class="text-slate-400 dark:text-white/20 select-none">4</span>
+                    <p class="pl-4">focus: [<span class="code-syntax-string">'asp.net core MVC/RestAPI'</span>, <span
+                            class="code-syntax-string">'Angular'</span>],</p>
+                </div>
+                <div class="flex gap-4">
+                    <span class="text-slate-400 dark:text-white/20 select-none">5</span>
+                    <p class="pl-4">region: <span class="code-syntax-string">'India/Japan'</span></p>
+                </div>
+                <div class="flex gap-4">
+                    <span class="text-slate-400 dark:text-white/20 select-none">6</span>
+                    <p class="pl-4 italic text-slate-400 dark:text-white/30">// <a href="Mutharasi resume.pdf" download
+                            class="hover:text-cyan-dark dark:hover:text-cyan-electric underline decoration-dotted">Download_Resume.pdf</a>
+                    </p>
+                </div>
+                <div class="flex gap-4">
+                    <span class="text-slate-400 dark:text-white/20 select-none">7</span>
+                    <p>};</p>
+                </div>
+            </div>
+        </section>
+        <section id="repos" class="flex flex-col gap-4">
+            <h2 class="text-xs font-mono uppercase tracking-[0.2em] text-cyan-dark/70 dark:text-cyan-electric/60 px-1">
+                Project_Repository</h2>
+            <div class="flex overflow-x-auto gap-4 bento-scroll pb-2 -mx-6 px-6">
+                <div
+                    class="min-w-[300px] bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 rounded-2xl overflow-hidden flex flex-col group shadow-md">
+                    <div
+                        class="h-32 bg-gradient-to-br from-cyan-dark/10 to-light-bg dark:from-cyan-electric/20 dark:to-navy-deep p-6 flex items-end">
+                        <span
+                            class="material-symbols-outlined text-4xl text-cyan-dark dark:text-cyan-electric opacity-50">data_thresholding</span>
+                    </div>
+                    <div class="p-5 flex flex-col gap-4">
+                        <div>
+                            <h3 class="text-sm font-bold text-slate-800 dark:text-white uppercase">Legacy Modernization
+                                Platform</h3>
+                            <p class="text-[11px] text-slate-500 dark:text-white/50 mt-1 line-clamp-2">migrated complex
+                                legacy computer aided engineering perl and shell application to asp.net core application
+                                done by single handed</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="min-w-[300px] bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 rounded-2xl overflow-hidden flex flex-col group shadow-md">
+                    <div
+                        class="h-32 bg-gradient-to-br from-purple-500/10 to-light-bg dark:from-purple-500/20 dark:to-navy-deep p-6 flex items-end">
+                        <span
+                            class="material-symbols-outlined text-4xl text-purple-600 dark:text-purple-400 opacity-50">router</span>
+                    </div>
+                    <div class="p-5 flex flex-col gap-4">
+                        <div>
+                            <h3 class="text-sm font-bold text-slate-800 dark:text-white uppercase">IoT Update System
+                            </h3>
+                            <p class="text-[11px] text-slate-500 dark:text-white/50 mt-1 line-clamp-2">asp.net core mvc
+                                monolathic to microservices and software update for iot servers</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="min-w-[300px] bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 rounded-2xl overflow-hidden flex flex-col group shadow-md">
+                    <div
+                        class="h-32 bg-gradient-to-br from-terminal-green/10 to-light-bg dark:from-terminal-green/20 dark:to-navy-deep p-6 flex items-end">
+                        <span class="material-symbols-outlined text-4xl text-terminal-green opacity-50">map</span>
+                    </div>
+                    <div class="p-5 flex flex-col gap-4">
+                        <div>
+                            <h3 class="text-sm font-bold text-slate-800 dark:text-white uppercase">3D Map PoC</h3>
+                            <p class="text-[11px] text-slate-500 dark:text-white/50 mt-1 line-clamp-2">interactive 3d
+                                map using mapbox and show the network flow</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="commits" class="flex flex-col gap-4">
+            <h2 class="text-xs font-mono uppercase tracking-[0.2em] text-cyan-dark/70 dark:text-cyan-electric/60 px-1">
+                Commit_History</h2>
+            <div
+                class="bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 rounded-2xl p-6 relative shadow-md">
+                <div class="absolute left-6 top-10 bottom-10 w-[1px] bg-slate-300 dark:bg-white/10"></div>
+                <div class="space-y-8 pl-6">
+                    <div class="relative timeline-dot">
+                        <div class="flex justify-between items-start mb-1">
+                            <h3 class="text-sm font-bold text-slate-800 dark:text-white">PrimeMover</h3>
+                            <span
+                                class="text-[9px] font-mono text-cyan-dark dark:text-cyan-electric bg-cyan-dark/10 dark:bg-cyan-electric/10 px-1.5 py-0.5 rounded border border-cyan-dark/20 dark:border-cyan-electric/20">Present</span>
+                        </div>
+                        <p class="text-[10px] text-slate-500 dark:text-white/50 mb-3 italic">Full Stack Developer</p>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span
+                                class="text-[9px] font-mono border border-slate-300 dark:border-white/10 px-2 py-0.5 rounded text-slate-600 dark:text-white/70">.NET
+                                Core</span>
+                            <span
+                                class="text-[9px] font-mono border border-slate-300 dark:border-white/10 px-2 py-0.5 rounded text-slate-600 dark:text-white/70">Angular</span>
+                            <span
+                                class="text-[9px] font-mono border border-slate-300 dark:border-white/10 px-2 py-0.5 rounded text-slate-600 dark:text-white/70">Azure</span>
+                        </div>
+                    </div>
+                    <div class="relative timeline-dot">
+                        <div class="flex justify-between items-start mb-1">
+                            <h3 class="text-sm font-bold text-slate-800 dark:text-white">Mitsubishi Fuso</h3>
+                            <span class="text-[9px] font-mono text-slate-400 dark:text-white/40">2023</span>
+                        </div>
+                        <p class="text-[10px] text-slate-500 dark:text-white/50 mb-3 italic">Onsite Consultant (Japan)
+                        </p>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span
+                                class="text-[9px] font-mono border border-slate-300 dark:border-white/10 px-2 py-0.5 rounded text-slate-600 dark:text-white/70">SAP
+                                Integration</span>
+                            <span
+                                class="text-[9px] font-mono border border-slate-300 dark:border-white/10 px-2 py-0.5 rounded text-slate-600 dark:text-white/70">SQL
+                                Server</span>
+                        </div>
+                    </div>
+                    <div class="relative timeline-dot">
+                        <div class="flex justify-between items-start mb-1">
+                            <h3 class="text-sm font-bold text-slate-800 dark:text-white">Jeyan</h3>
+                            <span class="text-[9px] font-mono text-slate-400 dark:text-white/40">2021-2022</span>
+                        </div>
+                        <p class="text-[10px] text-slate-500 dark:text-white/50 mb-3 italic">Software Engineer</p>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span
+                                class="text-[9px] font-mono border border-slate-300 dark:border-white/10 px-2 py-0.5 rounded text-slate-600 dark:text-white/70">C#</span>
+                            <span
+                                class="text-[9px] font-mono border border-slate-300 dark:border-white/10 px-2 py-0.5 rounded text-slate-600 dark:text-white/70">Web
+                                API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="flex flex-col gap-4">
+            <h2 class="text-xs font-mono uppercase tracking-[0.2em] text-cyan-dark/70 dark:text-cyan-electric/60 px-1">
+                Tech_Payload</h2>
+            <div class="flex flex-wrap gap-2.5">
+                <div
+                    class="px-3 py-1.5 rounded-full bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 text-xs font-medium text-slate-700 dark:text-white flex items-center gap-2 shadow-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-cyan-dark dark:bg-cyan-electric"></span> ASP.NET Core
+                </div>
+                <div
+                    class="px-3 py-1.5 rounded-full bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 text-xs font-medium text-slate-700 dark:text-white flex items-center gap-2 shadow-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-cyan-dark dark:bg-cyan-electric"></span> Angular 17
+                </div>
+                <div
+                    class="px-3 py-1.5 rounded-full bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 text-xs font-medium text-slate-700 dark:text-white flex items-center gap-2 shadow-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-cyan-dark dark:bg-cyan-electric"></span> TypeScript
+                </div>
+                <div
+                    class="px-3 py-1.5 rounded-full bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 text-xs font-medium text-slate-700 dark:text-white flex items-center gap-2 shadow-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-cyan-dark dark:bg-cyan-electric"></span> EF Core
+                </div>
+            </div>
+        </section>
+        <section class="flex flex-col gap-4">
+            <h2 class="text-xs font-mono uppercase tracking-[0.2em] text-cyan-dark/70 dark:text-cyan-electric/60 px-1">
+                Module_Expansion</h2>
+            <div class="flex overflow-x-auto gap-4 bento-scroll pb-2 -mx-6 px-6">
+                <!-- Book Management -->
+                <div
+                    class="min-w-[280px] bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 rounded-2xl p-5 flex flex-col gap-4 shadow-md">
+                    <div class="flex items-center gap-3">
+                        <span
+                            class="material-symbols-outlined text-cyan-dark dark:text-cyan-electric">library_books</span>
+                        <h3 class="text-sm font-bold text-slate-800 dark:text-white uppercase">Book Management</h3>
+                    </div>
+                    <p class="text-[11px] text-slate-500 dark:text-white/50 line-clamp-2">Complete CRUD system with
+                        advanced sorting and citation support for journals and URLs.</p>
+                    <a href="book-management.html"
+                        class="w-full py-2 rounded bg-black/5 dark:bg-white/5 border border-slate-300/50 dark:border-white/10 text-[10px] font-bold uppercase tracking-wider flex items-center justify-center gap-1 text-slate-700 dark:text-white hover:bg-black/10 transition-colors">
+                        <span class="material-symbols-outlined text-sm">info</span> View Detail
+                    </a>
+                </div>
+                <!-- Customer CRM -->
+                <div
+                    class="min-w-[280px] bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 rounded-2xl p-5 flex flex-col gap-4 shadow-md">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-purple-500">groups</span>
+                        <h3 class="text-sm font-bold text-slate-800 dark:text-white uppercase">Customer CRM</h3>
+                    </div>
+                    <p class="text-[11px] text-slate-500 dark:text-white/50 line-clamp-2">Multi-address client
+                        management system built with ASP.NET MVC and Entity Framework.</p>
+                    <a href="customer-crm.html"
+                        class="w-full py-2 rounded bg-black/5 dark:bg-white/5 border border-slate-300/50 dark:border-white/10 text-[10px] font-bold uppercase tracking-wider flex items-center justify-center gap-1 text-slate-700 dark:text-white hover:bg-black/10 transition-colors">
+                        <span class="material-symbols-outlined text-sm">info</span> View Detail
+                    </a>
+                </div>
+                <!-- Blog Platform -->
+                <div
+                    class="min-w-[280px] bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 rounded-2xl p-5 flex flex-col gap-4 shadow-md">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-terminal-green">article</span>
+                        <h3 class="text-sm font-bold text-slate-800 dark:text-white uppercase">Blog Platform</h3>
+                    </div>
+                    <p class="text-[11px] text-slate-500 dark:text-white/50 line-clamp-2">Feature-rich blogging system
+                        with Cloudinary integration and dynamic tagging logic.</p>
+                    <a href="blog-platform.html"
+                        class="w-full py-2 rounded bg-black/5 dark:bg-white/5 border border-slate-300/50 dark:border-white/10 text-[10px] font-bold uppercase tracking-wider flex items-center justify-center gap-1 text-slate-700 dark:text-white hover:bg-black/10 transition-colors">
+                        <span class="material-symbols-outlined text-sm">info</span> View Detail
+                    </a>
+                </div>
+                <!-- Text to Speech -->
+                <div
+                    class="min-w-[280px] bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 rounded-2xl p-5 flex flex-col gap-4 shadow-md">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-terminal-yellow">volume_up</span>
+                        <h3 class="text-sm font-bold text-slate-800 dark:text-white uppercase">Text to Speech</h3>
+                    </div>
+                    <p class="text-[11px] text-slate-500 dark:text-white/50 line-clamp-2">Accessible web tool converting
+                        text to audible speech with customizable voice selection.</p>
+                    <a href="text-to-speech.html"
+                        class="w-full py-2 rounded bg-black/5 dark:bg-white/5 border border-slate-300/50 dark:border-white/10 text-[10px] font-bold uppercase tracking-wider flex items-center justify-center gap-1 text-slate-700 dark:text-white hover:bg-black/10 transition-colors">
+                        <span class="material-symbols-outlined text-sm">info</span> View Detail
+                    </a>
+                </div>
+                <!-- Weather App -->
+                <div
+                    class="min-w-[280px] bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 rounded-2xl p-5 flex flex-col gap-4 shadow-md">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-cyan-electric">wb_sunny</span>
+                        <h3 class="text-sm font-bold text-slate-800 dark:text-white uppercase">Weather App</h3>
+                    </div>
+                    <p class="text-[11px] text-slate-500 dark:text-white/50 line-clamp-2">Responsive city weather
+                        tracker providing real-time conditions and global search capability.</p>
+                    <a href="weather-app.html"
+                        class="w-full py-2 rounded bg-black/5 dark:bg-white/5 border border-slate-300/50 dark:border-white/10 text-[10px] font-bold uppercase tracking-wider flex items-center justify-center gap-1 text-slate-700 dark:text-white hover:bg-black/10 transition-colors">
+                        <span class="material-symbols-outlined text-sm">info</span> View Detail
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="sync" class="flex flex-col gap-4">
+            <h2 class="text-xs font-mono uppercase tracking-[0.2em] text-cyan-dark/70 dark:text-cyan-electric/60 px-1">
+                Connect_Terminal</h2>
+            <div
+                class="rounded-xl bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 overflow-hidden shadow-lg">
+                <div
+                    class="bg-black/5 dark:bg-white/5 px-4 py-2 border-b border-slate-300/50 dark:border-white/10 flex items-center justify-between">
+                    <span class="text-[10px] font-mono text-slate-400 dark:text-white/40">contact_form.sh</span>
+                    <span class="text-[10px] font-mono text-terminal-green">READY</span>
+                </div>
+                <form action="https://formsubmit.co/mutharasisundharam1234@gmail.com" method="POST"
+                    class="p-6 flex flex-col gap-5">
+                    <!-- FormSubmit Configurations -->
+                    <input type="hidden" name="_subject" value="New Contact from Tech Portfolio">
+                    <input type="hidden" name="_template" value="table">
+
+                    <div class="flex flex-col gap-2">
+                        <label
+                            class="text-[10px] font-mono text-cyan-dark dark:text-cyan-electric uppercase tracking-widest pl-1">Input_Name:</label>
+                        <input name="name" required
+                            class="bg-light-bg dark:bg-navy-deep border-slate-300/50 dark:border-white/10 border rounded px-4 py-3 text-sm focus:ring-1 focus:ring-cyan-dark dark:focus:ring-cyan-electric focus:border-cyan-dark dark:focus:border-cyan-electric transition-all text-slate-800 dark:text-white placeholder:text-slate-400 dark:placeholder:text-white/10"
+                            placeholder="guest@identity.sys" type="text" />
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label
+                            class="text-[10px] font-mono text-cyan-dark dark:text-cyan-electric uppercase tracking-widest pl-1">Contact_Detail:</label>
+                        <input name="contact" required
+                            class="bg-light-bg dark:bg-navy-deep border-slate-300/50 dark:border-white/10 border rounded px-4 py-3 text-sm focus:ring-1 focus:ring-cyan-dark dark:focus:ring-cyan-electric focus:border-cyan-dark dark:focus:border-cyan-electric transition-all text-slate-800 dark:text-white placeholder:text-slate-400 dark:placeholder:text-white/10"
+                            placeholder="email@domain.com or phone_id" type="text" />
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label
+                            class="text-[10px] font-mono text-cyan-dark dark:text-cyan-electric uppercase tracking-widest pl-1">Message_Buffer:</label>
+                        <textarea name="message" required
+                            class="bg-light-bg dark:bg-navy-deep border-slate-300/50 dark:border-white/10 border rounded px-4 py-3 text-sm focus:ring-1 focus:ring-cyan-dark dark:focus:ring-cyan-electric focus:border-cyan-dark dark:focus:border-cyan-electric transition-all text-slate-800 dark:text-white placeholder:text-slate-400 dark:placeholder:text-white/10"
+                            placeholder="Transmitting data..." rows="3"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="mt-2 w-full py-4 bg-cyan-dark dark:bg-cyan-electric text-white dark:text-navy-deep font-black text-sm uppercase tracking-[0.3em] rounded flex items-center justify-center gap-2 active:scale-[0.98] transition-transform shadow-md hover:opacity-90">
+                        EXECUTE_CONTACT
+                        <span class="material-symbols-outlined">send</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+        <section class="grid grid-cols-2 gap-4">
+            <div
+                class="bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 rounded-2xl p-4 flex flex-col justify-center items-center text-center shadow-sm">
+                <span class="text-2xl font-black text-slate-800 dark:text-white">100%</span>
+                <span class="text-[10px] uppercase font-mono text-slate-500 dark:text-white/40 tracking-tighter">Onsite
+                    Success</span>
+            </div>
+            <div
+                class="bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 rounded-2xl p-4 flex flex-col justify-center items-center text-center shadow-sm">
+                <span class="text-2xl font-black text-cyan-dark dark:text-cyan-electric">0ms</span>
+                <span class="text-[10px] uppercase font-mono text-slate-500 dark:text-white/40 tracking-tighter">Latent
+                    Response</span>
+            </div>
+        </section>
+    </main>
+    <nav
+        class="fixed bottom-0 left-0 right-0 z-50 px-6 pb-8 pt-4 bg-light-bg/80 dark:bg-navy-deep/80 backdrop-blur-xl border-t border-slate-300/50 dark:border-white/5">
+        <div class="flex justify-between items-center max-w-md mx-auto">
+            <a class="flex flex-col items-center gap-1 group transition-all" href="#whoami">
+                <span class="material-symbols-outlined text-cyan-dark dark:text-cyan-electric group-hover:scale-110"
+                    style="font-variation-settings: 'FILL' 1;">terminal</span>
+                <span class="text-[10px] font-mono text-cyan-dark dark:text-cyan-electric">INIT</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 group opacity-60 hover:opacity-100 transition-all" href="#repos">
+                <span
+                    class="material-symbols-outlined text-slate-800 dark:text-white group-hover:scale-110">grid_view</span>
+                <span class="text-[10px] font-mono text-slate-800 dark:text-white">REPOS</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 group opacity-60 hover:opacity-100 transition-all"
+                href="#commits">
+                <span
+                    class="material-symbols-outlined text-slate-800 dark:text-white group-hover:scale-110">history_edu</span>
+                <span class="text-[10px] font-mono text-slate-800 dark:text-white">COMMITS</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 group opacity-60 hover:opacity-100 transition-all" href="#sync">
+                <span
+                    class="material-symbols-outlined text-slate-800 dark:text-white group-hover:scale-110">alternate_email</span>
+                <span class="text-[10px] font-mono text-slate-800 dark:text-white">SYNC</span>
+            </a>
+        </div>
+    </nav>
+
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Weather App - M. Mutharasi</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "navy-deep": "#050a1a",
+                        "navy-card": "#0a1229",
+                        "light-bg": "#f0f2f5",
+                        "light-card": "#e8eaf0",
+                        "cyan-electric": "#00f5ff",
+                        "cyan-dark": "#00b8bf",
+                        "terminal-green": "#10b981",
+                        "terminal-yellow": "#fbbf24",
+                        "terminal-red": "#ef4444"
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-light-bg dark:bg-navy-deep text-slate-800 dark:text-white font-sans;
+                background-image: 
+                    linear-gradient(rgba(0, 184, 191, 0.08) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0, 184, 191, 0.08) 1px, transparent 1px);
+                background-size: 30px 30px;
+            }
+            .dark body {
+                background-image: 
+                    linear-gradient(rgba(0, 245, 255, 0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0, 245, 255, 0.05) 1px, transparent 1px);
+            }
+        }
+    </style>
+</head>
+
+<body class="pb-32 transition-colors duration-300">
+    <header
+        class="sticky top-0 z-50 bg-light-bg/80 dark:bg-navy-deep/80 backdrop-blur-md border-b border-cyan-dark/10 dark:border-cyan-electric/10 px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div
+                    class="bg-cyan-dark dark:bg-cyan-electric h-7 w-7 rounded-sm flex items-center justify-center text-white dark:text-navy-deep font-black text-xs group-hover:scale-110 transition-transform">
+                    MM</div>
+                <span
+                    class="font-mono font-bold tracking-tighter text-cyan-dark dark:text-cyan-electric uppercase text-xs">m_mutharasi.sys</span>
+            </a>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="p-1 rounded-full hover:bg-black/5 dark:hover:bg-white/5 text-slate-400"
+                onclick="document.documentElement.classList.toggle('dark')">
+                <span class="material-symbols-outlined text-xl">contrast</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        <div class="flex flex-col gap-8">
+            <!-- Breadcrumb -->
+            <div class="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-slate-400">
+                <a href="index.html"
+                    class="hover:text-cyan-dark dark:hover:text-cyan-electric transition-colors">Home</a>
+                <span>/</span>
+                <span class="text-cyan-dark dark:text-cyan-electric">Project_Detail</span>
+                <span>/</span>
+                <span class="text-slate-600 dark:text-slate-300">Weather_App</span>
+            </div>
+
+            <!-- Title Section -->
+            <section
+                class="bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 rounded-2xl p-8 shadow-xl overflow-hidden relative">
+                <div class="absolute top-0 right-0 p-4 opacity-10">
+                    <span class="material-symbols-outlined text-8xl text-cyan-electric">wb_sunny</span>
+                </div>
+                <div class="relative z-10">
+                    <h1 class="text-4xl md:text-5xl font-black tracking-tighter uppercase mb-2">Weather App</h1>
+                    <p class="text-sm font-mono text-cyan-dark dark:text-cyan-electric uppercase tracking-widest">
+                        Module_ID: First_Project.env</p>
+                </div>
+            </section>
+
+            <!-- Content Grid -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Main Content -->
+                <div class="md:col-span-2 flex flex-col gap-6">
+                    <section
+                        class="bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 rounded-2xl p-6 shadow-lg">
+                        <h2
+                            class="text-xs font-mono uppercase tracking-[0.2em] text-cyan-dark/70 dark:text-cyan-electric/60 mb-4">
+                            Project_Mission</h2>
+                        <div
+                            class="prose dark:prose-invert max-w-none text-slate-600 dark:text-slate-300 text-sm leading-relaxed space-y-4">
+                            <p>Responsive city weather tracker providing real-time conditions and global search
+                                capability. A showcase of simple yet effective API integration and UI responsive design.
+                            </p>
+                            <p>Featuring auto-detection for user location and a dynamic search interface to query
+                                weather conditions for any city worldwide.</p>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Sidebar Content -->
+                <div class="flex flex-col gap-6">
+                    <section
+                        class="bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 rounded-2xl p-6 shadow-lg">
+                        <h2
+                            class="text-xs font-mono uppercase tracking-[0.2em] text-cyan-dark/70 dark:text-cyan-electric/60 mb-4">
+                            Stack_Payload</h2>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-1 rounded-md bg-cyan-electric/10 border border-cyan-electric/20 text-[10px] font-bold uppercase text-cyan-dark dark:text-cyan-electric">OpenWeather
+                                API</span>
+                            <span
+                                class="px-2 py-1 rounded-md bg-black/5 dark:bg-white/5 border border-slate-300/50 dark:border-white/10 text-[10px] font-bold uppercase text-slate-600 dark:text-slate-300">JavaScript</span>
+                            <span
+                                class="px-2 py-1 rounded-md bg-black/5 dark:bg-white/5 border border-slate-300/50 dark:border-white/10 text-[10px] font-bold uppercase text-slate-600 dark:text-slate-300">CSS3</span>
+                        </div>
+                    </section>
+
+                    <section
+                        class="bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 rounded-2xl p-6 shadow-lg">
+                        <h2
+                            class="text-xs font-mono uppercase tracking-[0.2em] text-cyan-dark/70 dark:text-cyan-electric/60 mb-4">
+                            UI_Mobile_Frame</h2>
+                        <div
+                            class="aspect-[9/16] max-w-[150px] mx-auto bg-slate-200 dark:bg-slate-800 rounded-3xl p-2 border-4 border-slate-300 dark:border-slate-800 shadow-xl overflow-hidden hover:scale-105 transition-transform group">
+                            <div
+                                class="w-full h-full flex items-center justify-center border border-dashed border-slate-400/50 rounded-2xl group-hover:border-cyan-electric transition-colors">
+                                <span
+                                    class="material-symbols-outlined text-2xl text-slate-400 group-hover:text-cyan-electric transition-colors">smartphone</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer
+        class="fixed bottom-0 left-0 right-0 bg-light-bg/80 dark:bg-navy-deep/80 backdrop-blur-md border-t border-cyan-dark/10 dark:border-cyan-electric/10 p-4">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span class="flex h-1.5 w-1.5 rounded-full bg-cyan-dark dark:bg-cyan-electric"></span>
+                <span class="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Version 2026.1.0</span>
+            </div>
+            <a href="index.html"
+                class="px-4 py-2 rounded-lg bg-cyan-dark dark:bg-cyan-electric text-white dark:text-navy-deep text-[10px] font-bold uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-lg shadow-cyan-dark/20 flex items-center gap-2">
+                <span class="material-symbols-outlined text-xs">arrow_back</span> Return_To_Base
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>
