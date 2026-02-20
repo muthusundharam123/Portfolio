@@ -110,10 +110,13 @@
                             Platform_Documentation</h2>
                         <div
                             class="prose dark:prose-invert max-w-none text-slate-600 dark:text-slate-300 text-sm leading-relaxed space-y-4">
-                            <p>Feature-rich blogging system with Cloudinary integration and dynamic tagging logic. Users
-                                can create, edit, and delete blog posts with ease.</p>
-                            <p>Seamless categorisation through multi-tag assignment and professional image hosting via
-                                Cloudinary API integration.</p>
+                            <p>A feature-rich blogging system built for high-performance content delivery. The platform
+                                goes beyond simple CRUD functionality by incorporating enterprise media management and a
+                                sophisticated tagging ecosystem.</p>
+                            <p>Users can create, edit, and orchestrate content effortlessly, with integrated
+                                <strong>Cloudinary API</strong> support for professional-grade image hosting and
+                                delivery.
+                            </p>
                         </div>
                     </section>
 
@@ -126,17 +129,30 @@
                             <div
                                 class="p-4 rounded-xl bg-black/5 dark:bg-white/5 border border-slate-300/30 dark:border-white/10">
                                 <span class="material-symbols-outlined text-terminal-green mb-2">cloud_upload</span>
-                                <h3 class="text-xs font-bold uppercase mb-1">Cloudinary API</h3>
-                                <p class="text-[10px] text-slate-500">Cloud-based media management for optimized project
-                                    visual delivery.</p>
+                                <h3 class="text-xs font-bold uppercase mb-1">Cloudinary Integration</h3>
+                                <p class="text-[10px] text-slate-500">Managed and delivered images via a seamless
+                                    cloud-based service, handling high-res uploads with ease.</p>
                             </div>
                             <div
                                 class="p-4 rounded-xl bg-black/5 dark:bg-white/5 border border-slate-300/30 dark:border-white/10">
                                 <span class="material-symbols-outlined text-terminal-green mb-2">tag</span>
-                                <h3 class="text-xs font-bold uppercase mb-1">Dynamic Tagging</h3>
-                                <p class="text-[10px] text-slate-500">Advanced sorting logic for content grouping and
-                                    discovery.</p>
+                                <h3 class="text-xs font-bold uppercase mb-1">Multi-Tagging System</h3>
+                                <p class="text-[10px] text-slate-500">A robust tagging logic allowing multiple
+                                    identifiers per post for pinpoint searchability and discovery.</p>
                             </div>
+                        </div>
+                    </section>
+
+                    <section
+                        class="bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 rounded-2xl p-6 shadow-lg">
+                        <h2
+                            class="text-xs font-mono uppercase tracking-[0.2em] text-cyan-dark/70 dark:text-cyan-electric/60 mb-4">
+                            Learning_Log</h2>
+                        <div
+                            class="prose dark:prose-invert max-w-none text-slate-600 dark:text-slate-300 text-[11px] leading-relaxed">
+                            <p>The primary challenge was implementing the <strong>many-to-many relationship</strong> for
+                                the tagging system within the database schema. This required precise LINQ orchestration
+                                to ensure efficient data retrieval across the blog-tag-post hierarchy.</p>
                         </div>
                     </section>
                 </div>
@@ -150,15 +166,33 @@
                             Architecture_Stack</h2>
                         <div class="flex flex-wrap gap-2">
                             <span
-                                class="px-2 py-1 rounded-md bg-terminal-green/10 border border-terminal-green/20 text-[10px] font-bold uppercase text-terminal-green">ASP.NET
+                                class="px-2 py-1 rounded-md bg-terminal-green/10 border border-terminal-green/20 text-[10px] font-bold uppercase text-terminal-green">C#
+                                / LINQ</span>
+                            <span
+                                class="px-2 py-1 rounded-md bg-black/5 dark:bg-white/5 border border-slate-300/50 dark:border-white/10 text-[10px] font-bold uppercase text-slate-600">ASP.NET
                                 MVC</span>
                             <span
-                                class="px-2 py-1 rounded-md bg-black/5 dark:bg-white/5 border border-slate-300/50 dark:border-white/10 text-[10px] font-bold uppercase text-slate-600 dark:text-slate-300">Razor
-                                Templates</span>
+                                class="px-2 py-1 rounded-md bg-black/5 dark:bg-white/5 border border-slate-300/50 dark:border-white/10 text-[10px] font-bold uppercase text-slate-600">EF
+                                Core</span>
                             <span
-                                class="px-2 py-1 rounded-md bg-black/5 dark:bg-white/5 border border-slate-300/50 dark:border-white/10 text-[10px] font-bold uppercase text-slate-600 dark:text-slate-300">Entity
-                                Framework</span>
+                                class="px-2 py-1 rounded-md bg-black/5 dark:bg-white/5 border border-slate-300/50 dark:border-white/10 text-[10px] font-bold uppercase text-slate-600">Cloudinary
+                                API</span>
                         </div>
+                    </section>
+
+                    <section
+                        class="bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 rounded-2xl p-6 shadow-lg">
+                        <h2
+                            class="text-xs font-mono uppercase tracking-[0.2em] text-cyan-dark/70 dark:text-cyan-electric/60 mb-4">
+                            Future_Nexus</h2>
+                        <ul class="text-[10px] text-slate-500 space-y-2">
+                            <li class="flex items-center gap-2"><span
+                                    class="h-1 w-1 bg-terminal-green rounded-full"></span> User Authentication</li>
+                            <li class="flex items-center gap-2"><span
+                                    class="h-1 w-1 bg-terminal-green rounded-full"></span> Tag-based Search/Filter</li>
+                            <li class="flex items-center gap-2"><span
+                                    class="h-1 w-1 bg-terminal-green rounded-full"></span> Community Interactions</li>
+                        </ul>
                     </section>
 
                     <section

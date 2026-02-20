@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Weather App - M. Mutharasi</title>
+    <title>IoT Update System - M. Mutharasi</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap"
@@ -81,21 +81,21 @@
                 <a href="index.html"
                     class="hover:text-cyan-dark dark:hover:text-cyan-electric transition-colors">Home</a>
                 <span>/</span>
-                <span class="text-cyan-dark dark:text-cyan-electric">Project_Detail</span>
+                <span class="text-cyan-dark dark:text-cyan-electric">System_Node</span>
                 <span>/</span>
-                <span class="text-slate-600 dark:text-slate-300">Weather_App</span>
+                <span class="text-slate-600 dark:text-slate-300">IoT_Update_System</span>
             </div>
 
             <!-- Title Section -->
             <section
                 class="bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 rounded-2xl p-8 shadow-xl overflow-hidden relative">
-                <div class="absolute top-0 right-0 p-4 opacity-10">
-                    <span class="material-symbols-outlined text-8xl text-cyan-electric">wb_sunny</span>
+                <div class="absolute top-0 right-0 p-4 opacity-10 text-purple-500">
+                    <span class="material-symbols-outlined text-8xl">router</span>
                 </div>
                 <div class="relative z-10">
-                    <h1 class="text-4xl md:text-5xl font-black tracking-tighter uppercase mb-2">Weather App</h1>
+                    <h1 class="text-4xl md:text-5xl font-black tracking-tighter uppercase mb-2">IoT Update System</h1>
                     <p class="text-sm font-mono text-cyan-dark dark:text-cyan-electric uppercase tracking-widest">
-                        Module_ID: First_Project.env</p>
+                        Status: Microservices_Live</p>
                 </div>
             </section>
 
@@ -107,15 +107,51 @@
                         class="bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 rounded-2xl p-6 shadow-lg">
                         <h2
                             class="text-xs font-mono uppercase tracking-[0.2em] text-cyan-dark/70 dark:text-cyan-electric/60 mb-4">
-                            Project_Mission</h2>
+                            System_Overview</h2>
                         <div
                             class="prose dark:prose-invert max-w-none text-slate-600 dark:text-slate-300 text-sm leading-relaxed space-y-4">
-                            <p>A simple, responsive, and highly interactive weather portal. Initially showcasing current
-                                conditions for my local city, the application allows users to query real-time weather
-                                data for any city worldwide.</p>
-                            <p>This project represents my first venture into real-time API integration, focusing on data
-                                visualization and mobile-first responsive design.</p>
+                            <p>Transformed a monolithic ASP.NET Core MVC IoT platform into a scalable
+                                <strong>Microservices Architecture</strong>. The system manages critical software update
+                                distributions for thousands of IoT devices.</p>
+                            <p>To ensure high availability and reliability, I integrated real-time communication
+                                channels and optimized data throughput for massive device connections.</p>
                         </div>
+                    </section>
+
+                    <section
+                        class="bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 rounded-2xl p-6 shadow-lg">
+                        <h2
+                            class="text-xs font-mono uppercase tracking-[0.2em] text-cyan-dark/70 dark:text-cyan-electric/60 mb-4">
+                            Technical_Milestones</h2>
+                        <ul class="space-y-3">
+                            <li
+                                class="flex items-start gap-3 p-3 rounded-lg bg-black/5 dark:bg-white/5 border border-slate-300/30 dark:border-white/5 transition-colors hover:bg-cyan-dark/5 dark:hover:bg-cyan-electric/5">
+                                <span class="material-symbols-outlined text-purple-500 text-sm mt-0.5">bolt</span>
+                                <div class="text-xs">
+                                    <span class="font-bold block mb-1">Real-time Updates</span>
+                                    <span class="text-slate-500">Implemented WebSocket-based communication for
+                                        instantaneous software update notifications to edge devices.</span>
+                                </div>
+                            </li>
+                            <li
+                                class="flex items-start gap-3 p-3 rounded-lg bg-black/5 dark:bg-white/5 border border-slate-300/30 dark:border-white/5 transition-colors hover:bg-cyan-dark/5 dark:hover:bg-cyan-electric/5">
+                                <span class="material-symbols-outlined text-purple-500 text-sm mt-0.5">memory</span>
+                                <div class="text-xs">
+                                    <span class="font-bold block mb-1">Redis Caching</span>
+                                    <span class="text-slate-500">Optimized system response times and reduced database
+                                        load using distributed Redis caching layers.</span>
+                                </div>
+                            </li>
+                            <li
+                                class="flex items-start gap-3 p-3 rounded-lg bg-black/5 dark:bg-white/5 border border-slate-300/30 dark:border-white/5 transition-colors hover:bg-cyan-dark/5 dark:hover:bg-cyan-electric/5">
+                                <span class="material-symbols-outlined text-purple-500 text-sm mt-0.5">terminal</span>
+                                <div class="text-xs">
+                                    <span class="font-bold block mb-1">Queue Management</span>
+                                    <span class="text-slate-500">Built RabbitMQ-integrated task handlers for
+                                        asynchronous message processing and system resilience.</span>
+                                </div>
+                            </li>
+                        </ul>
                     </section>
                 </div>
 
@@ -125,15 +161,19 @@
                         class="bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 rounded-2xl p-6 shadow-lg">
                         <h2
                             class="text-xs font-mono uppercase tracking-[0.2em] text-cyan-dark/70 dark:text-cyan-electric/60 mb-4">
-                            Stack_Payload</h2>
+                            Tech_Payload</h2>
                         <div class="flex flex-wrap gap-2">
                             <span
-                                class="px-2 py-1 rounded-md bg-cyan-electric/10 border border-cyan-electric/20 text-[10px] font-bold uppercase text-cyan-dark dark:text-cyan-electric">OpenWeather
-                                API</span>
+                                class="px-2 py-1 rounded-md bg-black/5 dark:bg-white/5 border border-slate-300/50 dark:border-white/10 text-[10px] font-bold uppercase text-slate-600 dark:text-slate-300">ASP.NET
+                                Core</span>
                             <span
-                                class="px-2 py-1 rounded-md bg-black/5 dark:bg-white/5 border border-slate-300/50 dark:border-white/10 text-[10px] font-bold uppercase text-slate-600 dark:text-slate-300">JavaScript</span>
+                                class="px-2 py-1 rounded-md bg-black/5 dark:bg-white/5 border border-slate-300/50 dark:border-white/10 text-[10px] font-bold uppercase text-slate-600 dark:text-slate-300">Redis</span>
                             <span
-                                class="px-2 py-1 rounded-md bg-black/5 dark:bg-white/5 border border-slate-300/50 dark:border-white/10 text-[10px] font-bold uppercase text-slate-600 dark:text-slate-300">CSS3</span>
+                                class="px-2 py-1 rounded-md bg-black/5 dark:bg-white/5 border border-slate-300/50 dark:border-white/10 text-[10px] font-bold uppercase text-slate-600 dark:text-slate-300">RabbitMQ</span>
+                            <span
+                                class="px-2 py-1 rounded-md bg-black/5 dark:bg-white/5 border border-slate-300/50 dark:border-white/10 text-[10px] font-bold uppercase text-slate-600 dark:text-slate-300">Docker</span>
+                            <span
+                                class="px-2 py-1 rounded-md bg-black/5 dark:bg-white/5 border border-slate-300/50 dark:border-white/10 text-[10px] font-bold uppercase text-slate-600 dark:text-slate-300">WebSockets</span>
                         </div>
                     </section>
 
@@ -141,13 +181,15 @@
                         class="bg-light-card dark:bg-navy-card border border-slate-300/50 dark:border-white/10 rounded-2xl p-6 shadow-lg">
                         <h2
                             class="text-xs font-mono uppercase tracking-[0.2em] text-cyan-dark/70 dark:text-cyan-electric/60 mb-4">
-                            UI_Mobile_Frame</h2>
+                            Asset_Mockup</h2>
                         <div
-                            class="aspect-[9/16] max-w-[150px] mx-auto bg-slate-200 dark:bg-slate-800 rounded-3xl p-2 border-4 border-slate-300 dark:border-slate-800 shadow-xl overflow-hidden hover:scale-105 transition-transform group">
-                            <div
-                                class="w-full h-full flex items-center justify-center border border-dashed border-slate-400/50 rounded-2xl group-hover:border-cyan-electric transition-colors">
+                            class="aspect-video bg-slate-200 dark:bg-slate-800 rounded-xl flex items-center justify-center border-2 border-dashed border-slate-300 dark:border-slate-700 hover:border-cyan-dark dark:hover:border-cyan-electric transition-colors group">
+                            <div class="text-center p-4">
                                 <span
-                                    class="material-symbols-outlined text-2xl text-slate-400 group-hover:text-cyan-electric transition-colors">smartphone</span>
+                                    class="material-symbols-outlined text-4xl text-slate-400 group-hover:text-purple-500 transition-colors mb-2">add_a_photo</span>
+                                <p
+                                    class="text-[8px] font-mono text-slate-400 group-hover:text-slate-500 transition-colors uppercase">
+                                    Microservices_Architecture_Map</p>
                             </div>
                         </div>
                     </section>
@@ -160,8 +202,9 @@
         class="fixed bottom-0 left-0 right-0 bg-light-bg/80 dark:bg-navy-deep/80 backdrop-blur-md border-t border-cyan-dark/10 dark:border-cyan-electric/10 p-4">
         <div class="max-w-4xl mx-auto flex items-center justify-between">
             <div class="flex items-center gap-2">
-                <span class="flex h-1.5 w-1.5 rounded-full bg-cyan-dark dark:bg-cyan-electric"></span>
-                <span class="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Version 2026.1.0</span>
+                <span class="flex h-1.5 w-1.5 rounded-full bg-purple-500"></span>
+                <span class="text-[9px] font-mono text-slate-400 uppercase tracking-widest">IoT Infrastructure
+                    Core</span>
             </div>
             <a href="index.html"
                 class="px-4 py-2 rounded-lg bg-cyan-dark dark:bg-cyan-electric text-white dark:text-navy-deep text-[10px] font-bold uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-lg shadow-cyan-dark/20 flex items-center gap-2">
